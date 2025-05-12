@@ -1,4 +1,9 @@
-[[redirect]]
-    from ="/"
-    to= "/index.html"
-    status = 200
+[build]
+  base = "client"  # This points to your client directory
+  command = "npm run build"  # The build command from your package.json
+  publish = "build"  # Create React App outputs to a "build" folder
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
